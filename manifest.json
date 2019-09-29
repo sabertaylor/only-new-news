@@ -1,0 +1,20 @@
+{
+  "name": "No Old News",
+  "version": "1.0",
+  "description": "Save news links you've already seen and hide them next visit to HN or Reddit",
+  "permissions": [
+    "activeTab",
+    "declarativeContent"
+  ],
+  "background": {
+    "scripts": [
+      "background.js",
+      "jquery/jquery.min.js"
+    ],
+    "persistent": false
+  },
+  "page_action": {
+    "default_popup": "popup.html"
+  },
+  "manifest_version": 2
+}
