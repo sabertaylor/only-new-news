@@ -1,5 +1,5 @@
 {
-  "name": "No Old News",
+  "name": "Only New News",
   "version": "1.0",
   "description": "Save news links you've already seen and hide them next visit to HN or Reddit",
   "permissions": [
@@ -10,7 +10,7 @@
   "background": {
     "scripts": [
       "background.js",
-      "jquery/jquery.min.js"
+      "libs/jquery.min.js"
     ],
     "persistent": false
   },
@@ -19,7 +19,7 @@
       "matches": [
         "<all_urls>"
       ],
-      "js": ["content.js"]
+      "js": ["libs/moment.min.js", "libs/jquery.min.js", "content.js"]
     }
   ],
   "page_action": {
