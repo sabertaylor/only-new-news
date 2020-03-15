@@ -4,7 +4,8 @@
   "description": "Save news links you've already seen and hide them next visit to HN or Reddit",
   "permissions": [
     "activeTab",
-    "declarativeContent"
+    "declarativeContent",
+    "storage"
   ],
   "background": {
     "scripts": [
@@ -13,6 +14,14 @@
     ],
     "persistent": false
   },
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": ["content.js"]
+    }
+  ],
   "page_action": {
     "default_popup": "popup.html"
   },
