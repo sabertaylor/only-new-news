@@ -26,7 +26,7 @@ function HideOldStories(storageKey, cssClass) {
       for (const [key, value] of Object.entries(oldNews)) {
         // Cull any identifiers older than 1 day.
         // It's ok to show the link again after that much time.
-        if ((moment() - moment(oldNews[key]) / (24 * 60 * 60 * 1000)) > 1) {
+        if (((moment() - moment(oldNews[key])) / (24 * 60 * 60 * 1000)) > 1) {
           culled++;
           delete oldNews[key];
         }
